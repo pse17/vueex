@@ -1,7 +1,15 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="sidebar">
+      <ul>
+        <li><router-link class="link" to="/report/rep7">Rep co-7</router-link></li>
+        <li><router-link class="link" to="/report/rep8">Rep co-8</router-link></li>
+      </ul>
+    </div>
+    <div class="content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -24,5 +32,20 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.sidebar {
+  float: left;
+  width: 20%;
+  padding-left: 0.1%;
+  text-align: left;
+}
+.content {
+  float: left;
+  width: 70%;
+  padding-left: 0.1%;
+  text-align: left;
+}
+ul {
+  list-style: none;
 }
 </style>
